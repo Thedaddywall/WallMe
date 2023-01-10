@@ -1,0 +1,99 @@
+/* variables css*/
+:root {
+    --primary: #210dd6;
+    --dark-primary: #190475;
+    --light-primary: #0a33ec;
+    --secondary: #7610b9;
+    --dark-secondary: #35046d;
+    --light-secondary: #9c0ad6;
+    --gray: #757575;
+    --error: #c5131c;
+    --succes: #238d23;
+    --withe: #fff;
+    --black: #000;
+    --height: calc(100vh - 56px);
+    --width: 100%;
+    --fontFamily: "roboto";
+}
+
+.floating-button {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+}
+
+#main .card-wide {
+    width: var(--width);
+}
+
+#modal-post-section {
+    display: none;
+    z-index: 1001;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    bottom: 0;
+    top: 56px;
+    background: #fff;
+    text-align: center;
+    transform: translateY(100vh);
+    transition: transform .5s;
+    
+}
+
+
+.svg--container {
+    position: relative;
+}
+
+.svg--container div {
+    height: 200px;
+    background: var(--dark-primary) url(../images/image.jpg);
+    background-position: bottom;
+    background-size: cover;
+    object-fit: cover ;
+    color: var(--white);
+}
+
+#main .page-index {
+    background: var(--dark-primary);
+    height: var(--height);
+}
+
+.svg--container svg {
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+}
+
+.page-initial {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    opacity: .87;
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+.page-initial i {
+    font-size: 3rem;
+    color: var(--withe);
+    min-width: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.page-initial .description {
+    color: var(--withe);
+    border-radius: 20px;
+    border: 2px solid rgb(1, 107, 206);
+    margin: 10px 10px;
+    padding: 8px;
+    width: calc(var(--width) - 50px);
+}

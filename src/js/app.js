@@ -50,5 +50,5 @@ window.addEventListener('load', async () => {
         }
     });
 
-});  
+});
 

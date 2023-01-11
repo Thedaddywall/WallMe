@@ -45,10 +45,10 @@ window.addEventListener('load', async () => {
             deferredPrompt.prompt();
             const response = await deferredPrompt.userChoise;
             if (response.outcome === 'dismissed') {
-                console.error('el usuario cancelo la instalacion');
+                console.error('El usuario cancelo la instalacion');
             }
         }
     });
-    
+
 });  
 

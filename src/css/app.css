@@ -116,12 +116,12 @@
 }
 
 .app--install div:last-child {
-    border: 1px spx solid rgb(59, 7, 179);
+    border: 1px solid rgb(11, 137, 221);
     border-radius: 4px;
     float: right;
     padding: 5px 8px;
 }
 
-.select-none {
+.select--none {
     user-select: none;
 }

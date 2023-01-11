@@ -16,7 +16,7 @@ const showPostModal = () => {
 const closePostModal = () => {
     MAIN.style.display = 'block';
     MODAL_POST.style.transform = 'translateY(100vh)'
-}
+};
 
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ window.addEventListener('load', async () => {
     bannerInstall.addEventListener('click', async () => {
         if (deferredPrompt) {
             deferredPrompt.prompt();
-            const response = await deferredPrompt.userChoise;
+            const response = await deferredPrompt.userChoice;
             if (response.outcome === 'dismissed') {
                 console.error('El usuario cancelo la instalacion');
             }

@@ -3,6 +3,7 @@ let MAIN;
 let MODAL_POST;
 let BTN_SHOW_POST;
 let BTN_CANCEL_POST;
+let deferredPrompt;
 
 //funciones
 const showPostModal = () => {
@@ -16,6 +17,11 @@ const closePostModal = () => {
     MAIN.style.display = 'block';
     MODAL_POST.style.transform = 'translateY(100vh)'
 }
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+});
 
 //all chargue dom
 window.addEventListener('load', async () => {
@@ -32,4 +38,17 @@ window.addEventListener('load', async () => {
             console.info('service worker registrado');
         }
     }
+
+    const bannerInstall = document.querySelector('#banner-install');
+    bannerInstall.addEventListener('click', async () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const response = await deferredPrompt.userChoise;
+            if (response.outcome === 'dismissed') {
+                console.error('el usuario cancelo la instalacion');
+            }
+        }
+    });
+    
 });  
+

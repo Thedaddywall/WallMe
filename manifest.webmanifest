@@ -1,0 +1,42 @@
+{
+    "short_name": "WallMe" ,
+    "name": "WallMe App",
+    "description": "Una aplicacion que le ayudara a compartir variedad de archivos",
+    "background_color": "#190475",
+    "theme_color": "#190475",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": ".",
+    "scope": ".",
+    "icons": [
+        {
+            "src": "src/images/icons/icon.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+
+        {
+            "src": "src/images/icons/icon2.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+
+        {
+            "src": "src/images/icons/icon3.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+
+        {
+            "src": "src/images/icons/icon4.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+
+        {
+            "src": "src/images/icons/icon5.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

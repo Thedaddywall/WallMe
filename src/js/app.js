@@ -32,10 +32,16 @@ window.addEventListener('load', async () => {
     BTN_CANCEL_POST = document.querySelector('#btn-post-cancel');
     BTN_CANCEL_POST.addEventListener('click', closePostModal);
 
+    await Notification.requestPermission();
+
     if ('serviceWorker' in navigator) {
         const response = await navigator.serviceWorker.register('sw.js');
         if (response) {
-            console.info('service worker registrado');
+            const ready = await navigator.serviceWorker.ready;
+            ready.showNotification('BIENVENIDO A WALLME', {
+                body: 'Espero le des un buen uso a esta aplicacion',
+                vibrate: [200, 100, 200, 100, 200, 100, 200]
+            });
         }
     }
 
